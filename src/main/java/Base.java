@@ -2,7 +2,11 @@ import java.util.Scanner;
 
 /**
  * Created by legionevil on 21.05.2018.
+ * @author legionevil
+ * @version 1.02
+ * @return возвращается дробное число с 4мя знаками после запятой
  */
+
 public class Base {
     public static void main(String[] args) {
         System.out.println("Калькулятор.");
