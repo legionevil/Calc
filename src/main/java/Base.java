@@ -15,7 +15,7 @@ public class Base {
         System.out.println("Введите второе дробное число:");
         float secondNum = scanner.nextFloat();
         /** Складываем и выводим на консоль */
-        System.out.println("Результат сложения:");
+        System.out.print("Результат сложения: ");
         float sum = firstNum + secondNum;
         System.out.printf("%.4f", sum);
     }
