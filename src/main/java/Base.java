@@ -24,10 +24,10 @@ public class Base {
         // Инициализируем сканер
         int userChoice = 0;
         Scanner scanner = new Scanner(System.in);
-        // Читаем выбор пользователя и ловим ошибку при несовпадении типов
         /**
          * @since 1.04
          */
+        // Читаем выбор пользователя и ловим ошибку при несовпадении типов
         try {
             userChoice = scanner.nextInt();
         }catch (InputMismatchException e){
@@ -75,6 +75,6 @@ public class Base {
             System.out.println("Такого варианта нет.");
         }
 
-
+//проверка обратной связи с идеей
     }
 }
