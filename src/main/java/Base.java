@@ -1,9 +1,12 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
+
+import static java.lang.System.exit;
 
 /**
  * Created by legionevil on 21.05.2018.
  * @author legionevil
- * @version 1.03
+ * @version 1.04
  */
 
 public class Base {
@@ -19,13 +22,22 @@ public class Base {
         System.out.println("3.Деление");
         System.out.println("4.Умножение");
         // Инициализируем сканер
+        int userChoice = 0;
         Scanner scanner = new Scanner(System.in);
-        // Читаем выбор пользователя
-        int answer = scanner.nextInt();
+        // Читаем выбор пользователя и ловим ошибку при несовпадении типов
+        /**
+         * @since 1.04
+         */
+        try {
+            userChoice = scanner.nextInt();
+        }catch (InputMismatchException e){
+            System.out.println("Ошибка ввода.");
+            exit(2);
+        }
         /**
          * @since 1.03
          */
-        if (answer == 1 || answer == 2 || answer == 3 || answer == 4) {
+        if (userChoice == 1 || userChoice == 2 || userChoice == 3 || userChoice == 4) {
             // Читаем 1 число и присваиваем переменной
             System.out.println("Введите первое дробное число:");
             float firstNum = scanner.nextFloat();
@@ -33,7 +45,7 @@ public class Base {
             System.out.println("Введите второе дробное число:");
             float secondNum = scanner.nextFloat();
             // Производим действие и выводим на консоль
-            switch (answer){
+            switch (userChoice){
                 case 1:
                     System.out.print("Результат сложения: ");
                     float sum = firstNum + secondNum;
