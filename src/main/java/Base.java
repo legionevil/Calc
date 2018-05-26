@@ -6,7 +6,7 @@ import static java.lang.System.exit;
 /**
  * Created by legionevil on 21.05.2018.
  * @author legionevil
- * @version 1.05
+ * @version 1.06
  */
 
 public class Base {
@@ -89,8 +89,23 @@ public class Base {
             }
         //выбран поиск
         } else if (userChoice == 2) {
-
-
+            int cnt = 0;
+            String maxLenString = "";
+            System.out.println("2.Поиск максимального слова в массиве.");
+            System.out.println("Введите количество строк в массиве:");
+            try {
+                cnt = scanner.nextInt();
+            }catch (InputMismatchException e){
+                System.out.println("Ошибка ввода.");
+                exit(2);
+            }
+            String words[] = new String[cnt];
+            for (int x = 0; x < cnt; x++){
+                System.out.println("Введите значение массива по индексу " + cnt + ":");
+                words[x] = scanner.next();
+                maxLenString = words[x].length() > maxLenString.length() ? words[x] : maxLenString;
+            }
+            System.out.println("Самая длинная строка в массиве: " + maxLenString);
         } else {
             // Ругаемся на некорректный ввод
             System.out.println("Такого варианта нет.");
