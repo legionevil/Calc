@@ -101,7 +101,7 @@ public class Base {
             }
             String words[] = new String[cnt];
             for (int x = 0; x < cnt; x++){
-                System.out.println("Введите значение массива по индексу " + cnt + ":");
+                System.out.println("Введите значение массива по индексу " + x + ":");
                 words[x] = scanner.next();
                 maxLenString = words[x].length() > maxLenString.length() ? words[x] : maxLenString;
             }
